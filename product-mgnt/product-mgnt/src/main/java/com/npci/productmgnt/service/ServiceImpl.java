@@ -49,7 +49,7 @@ public class ServiceImpl implements Service{
 		map.put("Products",products);
 		double sum=0;
 		for(Product p : products) {
-			sum+=p.getPrice();
+			sum= sum + p.getPrice()*p.getQuantity();
 		}
 		map.put("Price",sum);
 		double cgst = sum*0.09;
